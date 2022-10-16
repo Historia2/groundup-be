@@ -5,7 +5,7 @@
  */
 
 var app = require('../src/app');
-var debug = require('debug')('nodejs-mongodb-demo:server');
+var debug = require('debug')('groundup-be:server');
 var http = require('http');
 
 /**
