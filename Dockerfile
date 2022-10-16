@@ -10,8 +10,8 @@ USER node
 
 RUN yarn install --pure-lockfile
 
-CMD [ "yarn start" ]
-
 COPY --chown=node:node . .
 
 EXPOSE 3000
+
+CMD [ "yarn start" ]
