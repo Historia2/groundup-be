@@ -51,14 +51,14 @@ if (config.env === 'production') {
 }
 
 // v1 api routes
-app.use('/api/v1', routes);
+app.use('/v1', routes);
 
 // serve static file
 app.use(express.static('public'));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
-  // next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
+  next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
 });
 
 // convert error to ApiError, if needed
